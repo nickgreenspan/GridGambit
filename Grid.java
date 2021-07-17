@@ -1,3 +1,4 @@
+package GamePackage;
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
@@ -113,7 +114,6 @@ public class Grid extends JPanel implements ActionListener, KeyListener{
 			if (fireTimer % 5 == 0) {
 				int endMissileIdx = java.lang.Math.min(NUM_MISSILES, numMissilesCreated);
 				for (int i = 0; i < endMissileIdx; i++){
-					System.out.println(i);
 					currMissiles[i].update();
 					if (currMissiles[i].complete) {
 						currMissiles[i].decay();

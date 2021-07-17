@@ -1,3 +1,4 @@
+package GamePackage;
 import javax.swing.*;
 import java.awt.*;
 /* Main game class

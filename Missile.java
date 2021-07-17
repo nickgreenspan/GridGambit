@@ -1,3 +1,4 @@
+package GamePackage;
 import java.util.Random;
 
 public class Missile {
