@@ -11,6 +11,7 @@ public class Player extends JPanel {
 	
 	private static final long serialVersionUID = 1L;
 	public Point pos; //x and y coords in terms of grid squares
+	public boolean dead = false;
 
 	public Player() {
         pos = new Point(0, 0);
@@ -18,6 +19,7 @@ public class Player extends JPanel {
         
     }
 	public void resetPlayer() {
+		dead = false;
 		pos.x = 5;
 		pos.y = 5;
 	}
@@ -53,7 +55,7 @@ public class Player extends JPanel {
 			pos.y = Grid.width - 1;
 		}
 		if (Grid.board[pos.x][pos.y] == 1) {
-			resetPlayer();
+			dead = true;
 		}
 	}
 	
